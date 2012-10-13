@@ -2,6 +2,8 @@
 
 Chatroulette sample application.
 
+[![Build Status](https://secure.travis-ci.org/react-php/chatroulette.png?branch=master)](http://travis-ci.org/react-php/chatroulette)
+
 ## Install
 
     $ composer install --dev
