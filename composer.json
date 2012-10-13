@@ -1,0 +1,15 @@
+{
+    "require": {
+        "react/socket": "0.2.*",
+        "monolog/monolog": "1.2.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "psr-0": { "Igorw\\Chatroulette": "src/" }
+    },
+    "config": {
+        "bin-dir": "bin/"
+    }
+}
