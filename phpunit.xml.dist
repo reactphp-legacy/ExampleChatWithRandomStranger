@@ -6,7 +6,7 @@
 >
     <testsuites>
         <testsuite name="Chatroulette Test Suite">
-            <directory>./tests/Igorw/</directory>
+            <directory>./tests/React/</directory>
         </testsuite>
     </testsuites>
 

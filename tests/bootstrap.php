@@ -1,4 +1,4 @@
 <?php
 
 $loader = require __DIR__.'/../vendor/autoload.php';
-$loader->add('Igorw\Chatroulette', __DIR__);
+$loader->add('React\Chatroulette', __DIR__);

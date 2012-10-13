@@ -1,6 +1,6 @@
 <?php
 
-namespace Igorw\Chatroulette;
+namespace React\Chatroulette;
 
 use Evenement\EventEmitter;
 use React\Socket\ConnectionInterface;

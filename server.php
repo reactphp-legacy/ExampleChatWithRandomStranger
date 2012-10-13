@@ -7,7 +7,7 @@ require 'vendor/autoload.php';
 $logger = new Monolog\Logger('chatroulette');
 $logger->pushHandler(new Monolog\Handler\StreamHandler(STDOUT));
 
-$chatroulette = new Igorw\Chatroulette\Chatroulette($logger);
+$chatroulette = new React\Chatroulette\Chatroulette($logger);
 
 $loop = React\EventLoop\Factory::create();
 $socket = new React\Socket\Server($loop);

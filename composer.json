@@ -7,7 +7,7 @@
         "phpunit/phpunit": "3.7.*"
     },
     "autoload": {
-        "psr-0": { "Igorw\\Chatroulette": "src/" }
+        "psr-0": { "React\\Chatroulette": "src/" }
     },
     "config": {
         "bin-dir": "bin/"

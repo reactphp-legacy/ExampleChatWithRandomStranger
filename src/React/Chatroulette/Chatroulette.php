@@ -1,6 +1,6 @@
 <?php
 
-namespace Igorw\Chatroulette;
+namespace React\Chatroulette;
 
 use Monolog\Logger;
 use React\Socket\ConnectionInterface;
