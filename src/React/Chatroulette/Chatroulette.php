@@ -18,12 +18,13 @@ class Chatroulette
     public function connect(ConnectionInterface $conn)
     {
         $waiting = $this->waiting;
+        $logger = $this->logger;
 
-        $this->logger->info(sprintf("New connection %s", $conn->id));
+        $logger->info(sprintf("New connection %s", $conn->id));
         $conn->write(sprintf("Hello %s!\n", $conn->id));
 
-        $conn->on('end', function () use ($conn) {
-            $this->logger->info(sprintf("Connection %s disconnected", $conn->id));
+        $conn->on('end', function () use ($conn, $logger) {
+            $logger->info(sprintf("Connection %s disconnected", $conn->id));
         });
 
         if (null === $waiting || !$waiting->isReadable()) {
@@ -32,7 +33,7 @@ class Chatroulette
             return;
         }
 
-        $this->logger->info(sprintf("Pairing up connection %s with waiting connection %s",
+        $logger->info(sprintf("Pairing up connection %s with waiting connection %s",
             $conn->id, $waiting->id));
 
         $message = "You are now talking to %s.\n";
