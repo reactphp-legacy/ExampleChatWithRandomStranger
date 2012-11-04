@@ -8,8 +8,9 @@ use React\Socket\ConnectionInterface;
 
 class IntegrationTest extends \PHPUnit_Framework_TestCase
 {
-    private $logger;
     private $handler;
+    private $logger;
+    private $app;
 
     public function setUp()
     {
