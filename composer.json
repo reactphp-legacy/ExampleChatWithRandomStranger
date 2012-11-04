@@ -1,4 +1,8 @@
 {
+    "name": "react/chatroulette",
+    "description": "Chatroulette sample application.",
+    "keywords": ["chatroulette"],
+    "license": "MIT",
     "require": {
         "php": ">=5.4.0",
         "react/socket": "0.2.*",
