@@ -6,7 +6,7 @@ use Monolog\Logger;
 use Monolog\Handler\TestHandler;
 use React\Socket\ConnectionInterface;
 
-class ChatrouletteTest extends \PHPUnit_Framework_TestCase
+class IntegrationTest extends \PHPUnit_Framework_TestCase
 {
     private $logger;
     private $handler;
@@ -18,7 +18,10 @@ class ChatrouletteTest extends \PHPUnit_Framework_TestCase
         $this->logger = new Logger('chatroulette');
         $this->logger->pushHandler($this->handler);
 
-        $this->chatroulette = new Chatroulette($this->logger);
+        $this->app = new LoggingApp(
+            new TextApp(new PairApp()),
+            $this->logger
+        );
     }
 
     /** @test */
@@ -27,7 +30,7 @@ class ChatrouletteTest extends \PHPUnit_Framework_TestCase
         $alice = new ConnectionStub();
         $alice->id = 'Alice';
 
-        $this->chatroulette->connect($alice);
+        $this->app->connect($alice);
 
         $this->assertConnectionData($alice, [
             'Hello Alice!',
@@ -44,8 +47,8 @@ class ChatrouletteTest extends \PHPUnit_Framework_TestCase
     {
         list($alice, $bob) = $this->createAliceAndBob();
 
-        $this->chatroulette->connect($alice);
-        $this->chatroulette->connect($bob);
+        $this->app->connect($alice);
+        $this->app->connect($bob);
 
         $this->emitConnectionData($alice, 'Hallo Bob, wie geht es dir?');
         $this->emitConnectionData($bob, 'Je ne comprends pas!');
@@ -75,8 +78,8 @@ class ChatrouletteTest extends \PHPUnit_Framework_TestCase
     {
         list($alice, $bob) = $this->createAliceAndBob();
 
-        $this->chatroulette->connect($alice);
-        $this->chatroulette->connect($bob);
+        $this->app->connect($alice);
+        $this->app->connect($bob);
 
         $alice->close();
 
@@ -89,8 +92,8 @@ class ChatrouletteTest extends \PHPUnit_Framework_TestCase
     {
         list($alice, $bob) = $this->createAliceAndBob();
 
-        $this->chatroulette->connect($alice);
-        $this->chatroulette->connect($bob);
+        $this->app->connect($alice);
+        $this->app->connect($bob);
 
         $bob->close();
 
