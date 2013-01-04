@@ -21,10 +21,13 @@ $loop = React\EventLoop\Factory::create();
 $socket = new React\Socket\Server($loop);
 
 $i = 0;
+$names = ['Alice', 'Bob', 'Carol', 'Dave', 'Erin', 'Frank', 'Eve',
+          'Mallory', 'Oscar', 'Peggy', 'Trent', 'Walter'];
 
-$socket->on('connection', function ($conn) use (&$i, $app) {
-    $conn->id = ++$i;
+$socket->on('connection', function ($conn) use (&$i, $names, $app) {
+    $conn->id = isset($names[$i]) ? $names[$i] : $i;
     $app->connect($conn);
+    $i++;
 });
 
 $socket->listen(4000);
