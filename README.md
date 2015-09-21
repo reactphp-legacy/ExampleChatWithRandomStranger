@@ -6,7 +6,7 @@ Chatroulette sample application.
 
 ## Install
 
-    $ composer install --dev
+    $ composer install
 
 ## Usage
 
