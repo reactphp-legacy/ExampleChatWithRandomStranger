@@ -1,6 +1,6 @@
 <?php
 
-namespace React\Chatroulette;
+namespace React\ExampleChatWithRandomStranger;
 
 use Monolog\Logger;
 use Monolog\Handler\TestHandler;
@@ -16,7 +16,7 @@ class IntegrationTest extends \PHPUnit_Framework_TestCase
     {
         $this->handler = new TestHandler();
 
-        $this->logger = new Logger('chatroulette');
+        $this->logger = new Logger('ExampleChatWithRandomStranger');
         $this->logger->pushHandler($this->handler);
 
         $this->app = new LoggingApp(
