@@ -1,4 +1,4 @@
 <?php
 
 $loader = require __DIR__.'/../vendor/autoload.php';
-$loader->add('React\Chatroulette', __DIR__);
+$loader->add('React\ExampleChatWithRandomStranger', __DIR__);

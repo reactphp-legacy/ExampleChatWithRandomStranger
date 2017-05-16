@@ -1,6 +1,6 @@
 <?php
 
-namespace React\Chatroulette;
+namespace React\ExampleChatWithRandomStranger;
 
 use React\Socket\ConnectionInterface;
 
@@ -11,7 +11,7 @@ class TextAppTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->appMock = $this->getMock('React\Chatroulette\AppInterface');
+        $this->appMock = $this->getMock('React\ExampleChatWithRandomStranger\AppInterface');
         $this->app = new TextApp($this->appMock);
     }
 

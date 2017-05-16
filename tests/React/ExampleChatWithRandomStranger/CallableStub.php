@@ -1,6 +1,6 @@
 <?php
 
-namespace React\Chatroulette;
+namespace React\ExampleChatWithRandomStranger;
 
 class CallableStub
 {

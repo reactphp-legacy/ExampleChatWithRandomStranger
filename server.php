@@ -2,14 +2,14 @@
 
 // nc localhost 4000
 
-use React\Chatroulette\AppInterface;
-use React\Chatroulette\LoggingApp;
-use React\Chatroulette\PairApp;
-use React\Chatroulette\TextApp;
+use React\ExampleChatWithRandomStranger\AppInterface;
+use React\ExampleChatWithRandomStranger\LoggingApp;
+use React\ExampleChatWithRandomStranger\PairApp;
+use React\ExampleChatWithRandomStranger\TextApp;
 
 require 'vendor/autoload.php';
 
-$logger = new Monolog\Logger('chatroulette');
+$logger = new Monolog\Logger('ExampleChatWithRandomStranger');
 $logger->pushHandler(new Monolog\Handler\StreamHandler(STDOUT));
 
 $app = new LoggingApp(

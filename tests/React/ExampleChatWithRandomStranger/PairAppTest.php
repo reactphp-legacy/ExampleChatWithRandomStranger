@@ -1,7 +1,6 @@
 <?php
 
-namespace React\Chatroulette;
-
+namespace React\ExampleChatWithRandomStranger;
 use React\Socket\ConnectionInterface;
 
 class PairAppTest extends \PHPUnit_Framework_TestCase
@@ -91,6 +90,6 @@ class PairAppTest extends \PHPUnit_Framework_TestCase
 
     protected function createCallableMock()
     {
-        return $this->getMock('React\Chatroulette\CallableStub');
+        return $this->getMock('React\ExampleChatWithRandomStranger\CallableStub');
     }
 }

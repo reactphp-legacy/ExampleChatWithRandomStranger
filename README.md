@@ -1,8 +1,8 @@
-# React/Chatroulette
+# React/ExampleChatWithRandomStranger
 
-Chatroulette sample application.
+Sample application where 2 people are randomly paired up who connect and are able to send messages to eachother.
 
-[![Build Status](https://secure.travis-ci.org/reactphp/chatroulette.png?branch=master)](http://travis-ci.org/reactphp/chatroulette)
+[![Build Status](https://secure.travis-ci.org/reactphp/ExampleChatWithRandomStranger.png?branch=master)](http://travis-ci.org/reactphp/ExampleChatWithRandomStranger)
 
 ## Install
 
@@ -10,7 +10,7 @@ Chatroulette sample application.
 
 ## Usage
 
-To start the chatroulette server, run:
+To start the ExampleChatWithRandomStranger server, run:
 
     $ php server.php
 
